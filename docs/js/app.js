@@ -121,11 +121,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__; // ----------------------------------------------------------------------------
  // Buzz, a Javascript HTML5 Audio library
- // v1.2.0 - Built 2016-05-22 15:16
+ // v1.2.1 - Built 2018-05-10 10:14
  // Licensed under the MIT license.
  // http://buzz.jaysalvat.com/
  // ----------------------------------------------------------------------------
- // Copyright (C) 2010-2016 Jay Salvat
+ // Copyright (C) 2010-2018 Jay Salvat
  // http://jaysalvat.com/
  // ----------------------------------------------------------------------------
 
@@ -191,7 +191,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 if (!supported) {
                     return this;
                 }
-                this.sound.play();
+                this.sound.play().catch(function() {});
                 return this;
             };
             this.togglePlay = function() {
@@ -199,7 +199,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                     return this;
                 }
                 if (this.sound.paused) {
-                    this.sound.play();
+                    this.sound.play().catch(function() {});
                 } else {
                     this.sound.pause();
                 }
@@ -222,8 +222,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 if (!supported) {
                     return this;
                 }
-                this.setTime(0);
                 this.sound.pause();
+                this.setTime(0);
                 return this;
             };
             this.isEnded = function() {
