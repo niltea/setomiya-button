@@ -45,7 +45,12 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}#wrapper {
+}.button-twitter {
+  position: fixed;
+  left: 10px;
+  top: 10px; }
+
+#wrapper {
   display: flex;
   flex-flow: column;
   min-height: 100vh;

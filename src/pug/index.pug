@@ -18,6 +18,10 @@ html(lang='ja')
             | var isPC = true;
             | (function () { if (navigator.userAgent.toLowerCase().match(/iphone|ipad|android/)) { document.body.classList.add('sp');isPC=false;return; } document.body.classList .add('pc'); })();
         //block body
+        .header-nav
+            .button-twitter
+                a.twitter-share-button(href!="https://twitter.com/share?text=%E7%80%AC%E6%88%B8%E7%BE%8E%E5%A4%9C%E5%AD%90%E3%81%95%E3%82%93%E3%81%8C%E5%96%8B%E3%81%A3%E3%81%A6%E3%81%8F%E3%82%8C%E3%82%8B%E3%83%9C%E3%82%BF%E3%83%B3&url=https%3A%2F%2Fniltea.github.io%2Fsetomiya-button%2F%3Fref%3Dtwbtn", data-show-count="false") Tweet
+
         #wrapper
             main.mainContent
                 h1 せとみや
@@ -42,3 +46,4 @@ html(lang='ja')
         |function gtag(){dataLayer.push(arguments);}
         |gtag('js', new Date());
         |gtag('config', 'UA-115478883-3');
+    script(async, src="https://platform.twitter.com/widgets.js", charset="utf-8")
